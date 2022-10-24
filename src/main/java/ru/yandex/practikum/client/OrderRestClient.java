@@ -7,7 +7,7 @@ import ru.yandex.practikum.dto.OrderRequest;
 
 import static io.restassured.RestAssured.given;
 
-public class OrderRestClient extends RestClient{
+public class OrderRestClient extends RestClient {
     private static final String ORDER_CREATE = "orders";
     private static final String GET_LIST_ORDER = "orders";
     private static final String ORDER_CANCEL = "orders/cancel";
@@ -15,7 +15,7 @@ public class OrderRestClient extends RestClient{
     /**
      * create order
      */
-    @Step
+    @Step("Создание заказа")
     public ValidatableResponse createOrder(OrderRequest orderRequest) {
         return given()
                 .spec(getDefaultRequestSpec())
@@ -24,10 +24,10 @@ public class OrderRestClient extends RestClient{
                 .then();
     }
 
-      /**
-      * get order list
-      */
-    @Step
+    /**
+     * get order list
+     */
+    @Step("Получение списка заказов")
     public ValidatableResponse getOrderList() {
         return given()
                 .spec(getDefaultRequestSpec())
@@ -38,7 +38,7 @@ public class OrderRestClient extends RestClient{
     /**
      * cancel order
      */
-    @Step
+    @Step("Отмена заказа")
     public ValidatableResponse cancelOrder(CancelOrderRequest request) {
         return given()
                 .spec(getDefaultRequestSpec())

@@ -21,7 +21,7 @@ public class CourierLoginTest {
     @Before
     public void setUp() {
         courierRestClient = new CourierRestClient();
-        }
+    }
 
     @After
     public void tearDown() {

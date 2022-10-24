@@ -9,7 +9,6 @@ import ru.yandex.practikum.client.OrderRestClient;
 import ru.yandex.practikum.dto.CancelOrderRequest;
 import ru.yandex.practikum.dto.OrderRequest;
 
-
 import static org.apache.http.HttpStatus.SC_CREATED;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.notNullValue;
@@ -42,7 +41,6 @@ public class OrderCreateTest {
         this.color = color;
     }
 
-
     @Before
     public void setUp() {
         orderRestClient = new OrderRestClient();
@@ -60,15 +58,15 @@ public class OrderCreateTest {
 
     @Parameterized.Parameters
     public static Object[][] getOrderData() {
-        return new Object[][] {
-                {"Михаил", "Светлов", "г.Москва", "Беляево", "+7 988 777 67 57", 2, "2022-10-31", "Thanks", new String[] {"BLACK"}},
-                {"Анна", "Иванова", "г.Москва", "Аннино", "+7 999 534 78 87", 3, "2022-10-25", "Hello", new String[] {"BLACK", "GREY"}},
-                {"Ярослав", "Чернов", "г.Москва", "Пушкинская", "+7 967 543 68 90", 1, "2022-10-28", "Bye", new String[] {}},
+        return new Object[][]{
+                {"Михаил", "Светлов", "г.Москва", "Беляево", "+7 988 777 67 57", 2, "2022-10-31", "Thanks", new String[]{"BLACK"}},
+                {"Анна", "Иванова", "г.Москва", "Аннино", "+7 999 534 78 87", 3, "2022-10-25", "Hello", new String[]{"BLACK", "GREY"}},
+                {"Ярослав", "Чернов", "г.Москва", "Пушкинская", "+7 967 543 68 90", 1, "2022-10-28", "Bye", new String[]{}},
         };
     }
 
     @Test
-    @DisplayName ("Проверка создания заказа")
+    @DisplayName("Проверка создания заказа")
     public void createOrderTest() {
         // Arrange
         OrderRequest createOrderRequest = new OrderRequest();

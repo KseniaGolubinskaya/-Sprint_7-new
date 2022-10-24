@@ -12,11 +12,10 @@ public class CourierRestClient extends RestClient {
     private static final String COURIER_LOGIN = "courier/login";
     private static final String COURIER_DELETE = "courier/{id}";
 
-
     /**
      * create courier
      */
-    @Step
+    @Step("Создание курьера")
     public ValidatableResponse createCourier(CourierRequest courierRequest) {
         return given()
                 .spec(getDefaultRequestSpec())
@@ -28,7 +27,7 @@ public class CourierRestClient extends RestClient {
     /**
      * login courier
      */
-    @Step
+    @Step("Логин курьера")
     public ValidatableResponse loginCourier(LoginRequest loginRequest) {
         return given()
                 .spec(getDefaultRequestSpec())
@@ -40,7 +39,7 @@ public class CourierRestClient extends RestClient {
     /**
      * delete courier
      */
-    @Step
+    @Step("Удаление курьера")
     public ValidatableResponse deleteCourier(int id) {
         return given()
                 .spec(getDefaultRequestSpec())

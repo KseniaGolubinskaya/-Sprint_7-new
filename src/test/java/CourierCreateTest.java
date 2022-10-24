@@ -3,7 +3,6 @@ import io.restassured.response.ValidatableResponse;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-
 import ru.yandex.practikum.client.CourierRestClient;
 import ru.yandex.practikum.dto.CourierRequest;
 import ru.yandex.practikum.dto.LoginRequest;
